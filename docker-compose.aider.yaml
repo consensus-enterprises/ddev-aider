@@ -2,14 +2,14 @@
 services:
   aider:
     container_name: ddev-${DDEV_SITENAME}-aider
-    image: ${AIDER_DOCKER_IMAGE:-ddev/ddev-utilities:latest}
-    command: tail -f /dev/null
+    image: ${AIDER_DOCKER_IMAGE:-paulgauthier/aider:latest}
+    entrypoint: ["tail", "-f", "/dev/null"]
     restart: "no"
     # These labels ensure this service is discoverable by DDEV.
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: ${DDEV_APPROOT}
-
     volumes:
       - ".:/mnt/ddev_config"
       - "ddev-global-cache:/mnt/ddev-global-cache"
+      - "../:/app" # Mounts project codebase
