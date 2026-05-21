@@ -32,6 +32,7 @@ To use Aider, it must connect to an LLM. We recommend using locally hosted LLMs 
 ```bash
 ddev dotenv set .ddev/.env.aider --gemini-api-key=...
 echo .ddev/.env.aider >> .gitignore
+echo .aider/\* >> .gitignore
 ```
 
 For a full list of supported LLMs, review the [API key environment variables](https://aider.chat/docs/llms/other.html#other-api-key-variables) in the docs.
