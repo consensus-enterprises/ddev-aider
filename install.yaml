@@ -2,5 +2,6 @@ name: aider
 
 project_files:
   - docker-compose.aider.yaml
-
+  - aider.conf.yml
+  - commands/aider/
 ddev_version_constraint: '>= v1.24.10'

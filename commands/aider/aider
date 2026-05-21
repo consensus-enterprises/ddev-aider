@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#ddev-generated
+
+## Description: Run Aider (Ai-assisted pair-programming)
+## Usage: aider
+## Example: ddev aider
+
+aider --config .ddev/aider.conf.yml $@
